@@ -13,7 +13,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
    reg [2:0] state, next_state;
  
    // state coding
-   localparam [2:0] IDLE=0, S0=1;
+   localparam [2:0] IDLE=0, S0=1, S1=2;
    localparam [4:0] N=9, M=9;
     
     
@@ -49,27 +49,38 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
                     count_N <= 0;
            end
        end
-
+   //Adicionar mais um estagio pra fazer do start
     always @(*)
     begin
         case (state)
         IDLE:begin
+            if (START == 0)
+             next_state <= S0;
+            else
+                next_state = state;
+            enable <= 0;
+            run <= 0;
+            bist <= 0;
+            rst_reg <= 0;
+            out_reg <= 0;
+            end
+        S0:begin
                 if (START == 1)
                 begin
-                    next_state = S0;
+                    next_state = S1;
                     bist <= 0;
                 
                 end
               else
                begin 
-                   next_state = IDLE;
+                   next_state = state;
                    run <= 0;
                    out_reg <= 0;
                end
-            end
-        S0:if (count_N==N) 
+            end    
+        S1:if (count_N==N) 
             begin 
-                next_state <= S0;
+                next_state <= S1;
                 enable <= 0; 
                 run <= 1;
                 bist <= 0;
@@ -85,7 +96,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
             end
             else 
             begin
-                 next_state = S0;
+                 next_state = S1;
                  enable <= 1'b1;
                  run <= 1;
                  bist <= 0;
@@ -96,6 +107,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
              next_state = state;
              enable <= 0;
              run <= 0;
+             out_reg <= 0;
              bist <= 0;
              rst_reg <= 0;
          end 

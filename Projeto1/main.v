@@ -2,18 +2,17 @@
 
 module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
    input CLK,RESET,START;
-   output OUT,BIST_END,RUNNING;
+   output reg OUT,BIST_END,RUNNING;
    
    reg enable;
    reg [7:0] count; //deve contar ate 89 = (N+1)*(M+1)-1 = (9+1)*(8+1) 
    reg [3:0] count_N, count_M;
    
-   // state flip-flops
-   reg out_reg,bist,run,start;
+   // state flip-flops;
    reg [2:0] state, next_state;
  
    // state coding
-   localparam [2:0] IDLE=0, S0=1, S1=2, S2=3;
+   localparam [1:0] IDLE=0, S0=1, S1=2, S2=3;
    localparam [4:0] N=9, M=9;
     
     
@@ -32,7 +31,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
           count_N <=0;
           count_M <=0;
         end
-           if(run == 1'b1)
+           if(RUNNING == 1'b1)
            begin 
                 count_N <= count_N + 8'd1;     
            end
@@ -49,7 +48,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
                     count_N <= 0;
            end
        end
-   //Adicionar mais um estagio pra fazer do start
+
     always @(*)
     begin
         case (state)
@@ -58,10 +57,11 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
              next_state = S0;
             else
                 next_state = state;
+                
             enable = 0;
-            run = 0;
-            bist = 0;
-            out_reg = 0;
+            RUNNING = 0;
+            BIST_END = 0;
+            OUT = 0;
             end
         S0:begin
                 if (START == 1)
@@ -70,60 +70,56 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
                    next_state = state;
 
                enable = 0; 
-               run = 0;
-               bist = 0;
-               out_reg = 0;
+               RUNNING = 0;
+               BIST_END = 0;
+               OUT = 0;
             end    
         S1:if (count_N==N) 
             begin 
                 next_state = S1;
                 enable = 0; 
-                run = 1;
-                bist = 0;
-                out_reg = 0;
+                RUNNING = 1;
+                BIST_END = 0;
+                OUT = 0;
             end
             else if (count_M==M)
             begin
                 next_state = S2;
                 enable = 0; 
-                run = 0;
-                bist = 1;
-                out_reg = 0;
+                RUNNING = 0;
+                BIST_END = 1;
+                OUT = 0;
             end
             else 
             begin
                  next_state = S1;
                  enable = 1'b1;
-                 run = 1;
-                 bist = 0;
-                 out_reg = 1;
+                 RUNNING = 1;
+                 BIST_END = 0;
+                 OUT = 1;
             end 
         S2:begin
         if (START == 1)
             next_state = S1;
-        else
-            begin    
-                next_state = state;
-                 enable = 0;
-                 run = 0;
-                 out_reg = 0;
-                 bist = 1;
-            end 
+        else   
+            next_state = state;
+            
+        enable = 0;
+        RUNNING = 0;
+        OUT = 0;
+        BIST_END = 1;
+        
          end    
         default:   
          begin
              next_state = state;
              enable = 0;
-             run = 0;
-             out_reg = 0;
-             bist = 0;
+             RUNNING = 0;
+             OUT = 0;
+             BIST_END = 0;
          end 
             
         endcase
     end
-    
-  assign OUT = out_reg;
-  assign BIST_END = bist;
-  assign RUNNING = run;
 
 endmodule

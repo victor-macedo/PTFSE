@@ -1,6 +1,6 @@
 `timescale 1ns / 100ps
 
-module main(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
+module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
    input CLK,RESET,START;
    output reg OUT,BIST_END,RUNNING,INIT,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
@@ -9,7 +9,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
    reg [3:0] count_N, count_M;
    
    // state flip-flops;
-   reg [1:0] state, next_state;
+   reg [2:0] state, next_state;
  
    // state coding
    localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5;
@@ -24,7 +24,7 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             state <= next_state;
        end
     //Mudar o else if dos sensores
-    always @(posedge CLK)
+    always @(posedge CLK or posedge RESET)
        begin
        if (RESET == 1'b1)
         begin    

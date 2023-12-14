@@ -12,26 +12,20 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
    reg [2:0] state, next_state;
  
    // state coding
-   localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5;
+   localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5,S5=6;
    localparam [4:0] N=9, M=9;
     
-    
-    always @(posedge CLK or posedge RESET)
-       begin
-       if (RESET == 1'b1)
-            state <= IDLE;
-       else
-            state <= next_state;
-       end
-    //Mudar o else if dos sensores
+
     always @(posedge CLK or posedge RESET)
        begin
        if (RESET == 1'b1)
         begin    
+          state <= IDLE;  
           count_N <=0;
           count_M <=0;
         end
         else begin
+           state <= next_state;
            if(RUNNING == 1'b1)
            begin 
                 count_N <= count_N + 8'd1;     
@@ -51,7 +45,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
     always @(*)
     begin
         case (state)
-        IDLE:begin
+        IDLE:begin  //posicao inicial, para garantir start=0
             if (START == 0)
              next_state = S0;
             else
@@ -64,9 +58,9 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             INIT = 0;
             FINISH = 0;
             end
-        S0:begin
+        S0:begin    // Garantido start=0 espera para start=1
                 if (START == 1)
-                    next_state = S3;
+                    next_state = S1;
               else
                    next_state = state;
 
@@ -77,8 +71,8 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                INIT = 0;
                FINISH = 0;
             end    
-        S3:begin
-               next_state = S1;
+        S1:begin    //Ativa sinal de init antes de comecar a contagem
+               next_state = S2;
                enable = 0; 
                RUNNING = 0;
                BIST_END = 0;
@@ -86,9 +80,9 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                INIT = 1;
                FINISH = 0;
             end
-        S1:if (count_N==N) 
+        S2:if (count_N==N) //funcionamento do contador
             begin 
-                next_state = S1;
+                next_state = state;
                 enable = 0; 
                 RUNNING = 1;
                 BIST_END = 0;
@@ -98,7 +92,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             end
             else if (count_M==M)
             begin
-                next_state = S4;
+                next_state = S3;
                 enable = 0; 
                 RUNNING = 0;
                 BIST_END = 1;
@@ -108,7 +102,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             end
             else 
             begin
-                 next_state = S1;
+                 next_state = state;
                  enable = 1'b1;
                  RUNNING = 1;
                  BIST_END = 0;
@@ -116,8 +110,8 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                  INIT = 0;
                  FINISH = 0;
             end
-        S4:begin
-               next_state = S2;
+        S3:begin //Sinal de finish
+               next_state = S4;
                enable = 0; 
                RUNNING = 0;
                BIST_END = 0;
@@ -125,9 +119,9 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                INIT = 0;
                FINISH = 1;
             end     
-        S2:begin
-        if (START == 1)
-            next_state = S0; //verificar se ha problema voltar para S0 ao inves de S1
+        S4:begin
+        if (START == 0) //Espera zerar o start enquanto mantem o bist alto
+            next_state = S5; 
         else   
             next_state = state;
             
@@ -137,8 +131,21 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         BIST_END = 1;
         INIT = 0;
         FINISH = 0;
-        
-         end    
+              
+         end
+         S5:begin
+        if (START == 1) //verifica borda de subida do start antes de recomecar
+            next_state = S1; 
+        else   
+            next_state = state;
+            
+        enable = 0;
+        RUNNING = 0;
+        OUT = 0;
+        BIST_END = 1;
+        INIT = 0;
+        FINISH = 0;    
+        end
         default:   
          begin
              next_state = state;

@@ -4,7 +4,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
    input CLK,RESET,START;
    output reg OUT,BIST_END,RUNNING;
    
-   reg enable;
    reg [7:0] count; //deve contar ate 89 = (N+1)*(M+1)-1 = (9+1)*(8+1) 
    reg [3:0] count_N, count_M;
    
@@ -27,34 +26,33 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
        else
        begin
            state <= next_state; 
-           if(RUNNING == 1'b1)
-           begin 
-                count_N <= count_N + 8'd1;     
+           if(count_M==M)
+           begin
+                count_M <= 0;
+                count_N <= 0;   
            end
            
-           if(count_N==N)
+           else if(count_N==N)
            begin
                     count_M <= count_M + 8'd1;
                     count_N <= 0;
            end
            
-           if(count_M==M)
+           else if(RUNNING == 1'b1)
            begin
-                    count_M <= 0;
-                    count_N <= 0;
+                    count_N <= count_N + 8'd1;  
            end
        end
     end
     always @(*)
     begin
         case (state)
-        IDLE:begin          //posiï¿½ï¿½o inicial, para garantir start=0
+        IDLE:begin          //posição inicial, para garantir start=0
             if (START == 0)
              next_state = S0;
             else
                 next_state = state;
                 
-            enable = 0;
             RUNNING = 0;
             BIST_END = 0;
             OUT = 0;
@@ -65,7 +63,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
               else
                    next_state = state;
 
-               enable = 0; 
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
@@ -73,7 +70,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
         S1:if (count_N==N) //funcionamento apos start
             begin 
                 next_state = S1;
-                enable = 0; 
                 RUNNING = 1;
                 BIST_END = 0;
                 OUT = 0;
@@ -81,7 +77,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
             else if (count_M==M)
             begin
                 next_state = S2;
-                enable = 0; 
                 RUNNING = 0;
                 BIST_END = 1;
                 OUT = 0;
@@ -89,7 +84,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
             else 
             begin
                  next_state = S1;
-                 enable = 1'b1;
                  RUNNING = 1;
                  BIST_END = 0;
                  OUT = 1;
@@ -100,7 +94,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
         else   
             next_state = state;
             
-        enable = 0;
         RUNNING = 0;
         OUT = 0;
         BIST_END = 1;
@@ -112,7 +105,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
     else   
         next_state = state;
         
-    enable = 0;
     RUNNING = 0;
     OUT = 0;
     BIST_END = 1;
@@ -121,7 +113,6 @@ module main(CLK, RESET, START, OUT, BIST_END, RUNNING);
         default:   
          begin
              next_state = state;
-             enable = 0;
              RUNNING = 0;
              OUT = 0;
              BIST_END = 0;

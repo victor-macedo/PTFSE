@@ -4,7 +4,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
    input CLK,RESET,START;
    output reg OUT,BIST_END,RUNNING,INIT,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
-   reg enable; //retirar os enables
    reg [7:0] count; //deve contar ate 89 = (N+1)*(M+1)-1 = (9+1)*(8+1) 
    reg [3:0] count_N, count_M;
    
@@ -18,29 +17,30 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
 
     always @(posedge CLK or posedge RESET)
        begin
-       if (RESET == 1'b1)
-        begin    
-          state <= IDLE;  
-          count_N <=0;
-          count_M <=0;
-        end
-        else begin
-           state <= next_state;
-           if(RUNNING == 1'b1)
-           begin 
-                count_N <= count_N + 8'd1;     
-           end
-           else if(count_N==N)
-           begin
-                count_M <= count_M + 8'd1;
-                count_N <= 0;
-           end 
-           else if(count_M==M)
+           if (RESET == 1'b1)
+            begin    
+              state <= IDLE;  
+              count_N <=0;
+              count_M <=0;
+            end
+            else begin
+               state <= next_state;
+               if(count_M==M)
                begin
                     count_M <= 0;
-                    count_N <= 0;
+                    count_N <= 0;   
+               end               
+               else if(count_N==N)
+               begin
+                        count_M <= count_M + 8'd1;
+                        count_N <= 0;
                end
-           end
+               
+               else if(RUNNING == 1'b1)
+               begin
+                        count_N <= count_N + 8'd1;  
+               end
+            end  
     end
     always @(*)
     begin
@@ -51,7 +51,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             else
                 next_state = state;
                 
-            enable = 0;
             RUNNING = 0;
             BIST_END = 0;
             OUT = 0;
@@ -63,8 +62,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                     next_state = S1;
               else
                    next_state = state;
-
-               enable = 0; 
+ 
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
@@ -73,7 +71,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             end    
         S1:begin    //Ativa sinal de init antes de comecar a contagem
                next_state = S2;
-               enable = 0; 
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
@@ -83,7 +80,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         S2:if (count_N==N) //funcionamento do contador
             begin 
                 next_state = state;
-                enable = 0; 
                 RUNNING = 1;
                 BIST_END = 0;
                 OUT = 0;
@@ -93,7 +89,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             else if (count_M==M)
             begin
                 next_state = S3;
-                enable = 0; 
                 RUNNING = 0;
                 BIST_END = 1;
                 OUT = 0;
@@ -103,7 +98,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             else 
             begin
                  next_state = state;
-                 enable = 1'b1;
                  RUNNING = 1;
                  BIST_END = 0;
                  OUT = 1;
@@ -112,7 +106,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             end
         S3:begin //Sinal de finish
                next_state = S4;
-               enable = 0; 
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
@@ -125,7 +118,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         else   
             next_state = state;
             
-        enable = 0;
         RUNNING = 0;
         OUT = 0;
         BIST_END = 1;
@@ -138,8 +130,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             next_state = S1; 
         else   
             next_state = state;
-            
-        enable = 0;
+
         RUNNING = 0;
         OUT = 0;
         BIST_END = 1;
@@ -149,7 +140,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         default:   
          begin
              next_state = state;
-             enable = 0;
              RUNNING = 0;
              OUT = 0;
              BIST_END = 0;

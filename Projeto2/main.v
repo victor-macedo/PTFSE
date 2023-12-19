@@ -2,20 +2,21 @@
 
 module main(CLK,RST,bist_start,bist_end,pass_fail,in_k,in_j,in_en,out_synced_d,out_sync_err_d);
 input CLK,RST,bist_start,in_k,in_j,in_en;
-output reg bist_end, pass_fail,out_synced_d,out_sync_err_d;
-reg bist_out; //Registros para o Bist
+output reg pass_fail;
+output wire bist_end, out_synced_d, out_sync_err_d;
+wire bist_out; //Registros para o Bist
 reg circ_k,circ_j,circ_en; //Registros para o circuito
-reg in_x0,in_x1,in_x2; //Registro para o LFSR
-reg scan_out;
-reg h0,h1,h2; //registros misr
+wire in_x0,in_x1,in_x2; //Registro para o LFSR
+wire scan_out;
+wire h0,h1,h2; //registros misr
 reg [7:0] count; //Conferir contador do pass_fail
-reg s2,s1,s0; //Registros do signature
+wire s2,s1,s0; //Registros do signature
 //circuito12 circuito (.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d));
-circuito12_scan(.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d), .scan_en(bist_out),
+circuito12_scan circuito_scan(.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d), .scan_en(bist_out),
      .scan_in(x0), .scan_out(scan_out));
 LFSR LFSR_in (.CLK(CLK), .RST(RST), .x0(in_x0),.x1(in_x1),.x2(in_x2)); //LFSR na entrada do circuito
-Bist_control(.CLK(CLK), .RESET(RST), .START(bist_start), .OUT(bist_out), .BIST_END(bist_end), .RUNNING(),.INIT(),.FINISH());//INit deve reiniciar o scan,Finish é util para saber quando fazer pass_fail
-MISR MISR(.CLK(clk),.e0(scan_out),.e1(synced_d),.e2(sync_err_d),.h0(h0),.h1(h1),.h2(h2));
+Bist_control Bist(.CLK(CLK), .RESET(RST), .START(bist_start), .OUT(bist_out), .BIST_END(bist_end), .RUNNING(),.INIT(),.FINISH());//INit deve reiniciar o scan,Finish é util para saber quando fazer pass_fail
+MISR MISR(.CLK(CLK),.e0(scan_out),.e1(synced_d),.e2(sync_err_d),.h0(h0),.h1(h1),.h2(h2));
 //Falta signature e comparador
 always @(*) //Mux da entrada dos dados
 begin    

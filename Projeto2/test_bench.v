@@ -3,27 +3,21 @@
 module Controlador;
 
 reg clk, rst, bist_start;
-wire pass_fail, BIST_END;
+wire out_synced_d, out_sync_err_d, bist_end;
 
-main under_test(.CLK(clk),.RST(rst), .bist_start(bist_start), 
-                .pass_fail(pass_fail), .bist_end(BIST_END));
+main main(clk,rst,bist_start,bist_end,pass_fail,in_k,in_j,in_en,out_synced_d,out_sync_err_d);
 
 initial
 begin  
-        clk = 0;
-        #0 rst = 0;         //0
-        #10 rst = 1;        //10
-        
+	bist_start = 0;
+	clk = 0;
+	rst = 1;
+    #200 rst = 0;
+    #200 bist_start = 1;     //300
+    wait(bist_end == 1);
+    #400 $finish;      //34400
 end
 
 always #50 clk=~clk;
-
-initial
-begin
-    #0 bist_start = 0;       //0
-    #300 bist_start = 1;     //300
-    wait(BIST_END) $finish;      //10300
-    $display("%b",main.scan_out );
-end
 
 endmodule

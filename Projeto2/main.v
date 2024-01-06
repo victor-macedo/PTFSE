@@ -7,7 +7,7 @@ output wire bist_end, out_synced_d, out_sync_err_d;
 wire bist_out; //Registros para o Bist
 reg circ_k,circ_j,circ_en; //Registros para o circuito
 wire in_x0,in_x1,in_x2; //Registro para o LFSR
-wire scan_out;
+wire scan_out,Finish;
 wire h0,h1,h2; //registros misr
 wire [7:0] hf;
 reg [7:0] count; //Conferir contador do pass_fail
@@ -16,9 +16,9 @@ wire s2,s1,s0; //Registros do signature
 circuito12_scan circuito_scan(.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d), .scan_en(bist_out),
      .scan_in(in_x0), .scan_out(scan_out));
 LFSR LFSR_in (.CLK(CLK), .RST(RST), .x0(in_x0),.x1(in_x1),.x2(in_x2)); //LFSR na entrada do circuito
-Bist_control Bist(.CLK(CLK), .RESET(RST), .START(bist_start), .OUT(bist_out), .BIST_END(bist_end), .RUNNING(),.INIT(),.FINISH());//INit deve reiniciar o scan,Finish � util para saber quando fazer pass_fail
+Bist_control Bist(.CLK(CLK), .RESET(RST), .START(bist_start), .OUT(bist_out), .BIST_END(bist_end), .RUNNING(),.INIT(),.FINISH(Finish));//INit deve reiniciar o scan,Finish � util para saber quando fazer pass_fail
 MISR MISR(.CLK(CLK),.e0(scan_out),.e1(out_synced_d),.e2(out_sync_err_d),.hf(hf));
-Comparador Comp(.RST(RST),.Bist_end(bist_end), .hf(hf),.passnfail(pass_fail));
+Comparador Comp(.RST(RST),.Finish(Finish), .hf(hf),.passnfail(pass_fail));
 always @(*) //Mux da entrada dos dados
 begin    
     if  (bist_out == 0) //entrada comum do circuito
@@ -34,11 +34,4 @@ begin
         circ_en = in_x2;
     end    
 end
-
-//always @(*) //Comparador da saida
-//begin
-//    if (h2 & h1 & h0 != s2 & s1 & s0)
-//        count = count +1;    
-//    pass_fail = count;    
-//end    
 endmodule

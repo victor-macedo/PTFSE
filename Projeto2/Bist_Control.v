@@ -74,7 +74,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
-               INIT = 1;
+               INIT = 0;
                FINISH = 0;
             end
         S2:if (count_N==N) //funcionamento do contador
@@ -85,6 +85,15 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                 OUT = 0;
                 INIT = 0;
                 FINISH = 0;
+            end
+            else if (count_M==5)
+            begin
+            next_state = S3;
+            RUNNING = 0;
+            BIST_END = 1;
+            OUT = 0;
+            INIT = 1;
+            FINISH = 0;
             end
             else if (count_M==M)
             begin

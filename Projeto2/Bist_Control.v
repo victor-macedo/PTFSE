@@ -1,8 +1,8 @@
 `timescale 1ns / 100ps
 
-module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
+module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
    input CLK,RESET,START;
-   output reg OUT,BIST_END,RUNNING,INIT,FINISH;
+   output reg OUT,BIST_END,RUNNING,Seed,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
    reg [7:0] count; //deve contar ate 89 = (N+1)*(M+1)-1 = (9+1)*(8+1) 
    reg [3:0] count_N, count_M;
@@ -54,7 +54,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             RUNNING = 0;
             BIST_END = 0;
             OUT = 0;
-            INIT = 0;
+            Seed = 0;
             FINISH = 0;
             end
         S0:begin    // Garantido start=0 espera para start=1
@@ -66,7 +66,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
-               INIT = 0;
+               Seed = 0;
                FINISH = 0;
             end    
         S1:begin    //Ativa sinal de init antes de comecar a contagem
@@ -74,7 +74,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                RUNNING = 0;
                BIST_END = 0;
                OUT = 0;
-               INIT = 0;
+               Seed = 0;
                FINISH = 0;
             end
         S2:if (count_N==N) //funcionamento do contador
@@ -83,7 +83,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                 RUNNING = 1;
                 BIST_END = 0;
                 OUT = 0;
-                INIT = 0;
+                Seed = 0;
                 FINISH = 0;
             end
             else if (count_M==5)
@@ -92,7 +92,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
             RUNNING = 0;
             BIST_END = 1;
             OUT = 0;
-            INIT = 1;
+            Seed = 1;
             FINISH = 0;
             end
             else if (count_M==M)
@@ -101,7 +101,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                 RUNNING = 0;
                 BIST_END = 1;
                 OUT = 0;
-                INIT = 0;
+                Seed = 0;
                 FINISH = 0;
             end
             else 
@@ -110,7 +110,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                  RUNNING = 1;
                  BIST_END = 0;
                  OUT = 1;
-                 INIT = 0;
+                 Seed = 0;
                  FINISH = 0;
             end
         S3:begin //Sinal de finish
@@ -118,7 +118,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
                RUNNING = 0;
                BIST_END = 1;
                OUT = 0;
-               INIT = 0;
+               Seed = 0;
                FINISH = 1;
             end     
         S4:begin
@@ -130,7 +130,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         RUNNING = 0;
         OUT = 0;
         BIST_END = 1;
-        INIT = 0;
+        Seed = 0;
         FINISH = 0;
               
          end
@@ -143,7 +143,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         RUNNING = 0;
         OUT = 0;
         BIST_END = 1;
-        INIT = 0;
+        Seed = 0;
         FINISH = 0;    
         end
         default:   
@@ -152,7 +152,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
              RUNNING = 0;
              OUT = 0;
              BIST_END = 0;
-             INIT = 0;
+             Seed = 0;
              FINISH = 0;
          end 
             

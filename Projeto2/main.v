@@ -9,7 +9,7 @@ reg circ_k,circ_j,circ_en; //Registros para o circuito
 wire in_x0,in_x1,in_x2; //Registro para o LFSR
 wire scan_out,Finish;
 wire h0,h1,h2; //registros misr
-wire [5:0] hf;
+wire [7:0] hf;
 reg [7:0] count; //Conferir contador do pass_fail
 wire s2,s1,s0; //Registros do signature
 //circuito12 circuito (.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d));

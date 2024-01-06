@@ -2,8 +2,8 @@
 
 module MISR(CLK,e0,e1,e2,hf);
 input CLK,e0,e1,e2;
-reg h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14;
-output reg [14:0] hf;
+reg h0,h1,h2,h3,h4,h5;
+output reg [5:0] hf;
 
 always @(posedge CLK)
 begin
@@ -13,15 +13,7 @@ begin
     h3 <= !(h2 || h1);
     h4 <= !(h3 || h2);
     h5 <= !(h4 || h3);
-    h6 <= !(h5 || h4);
-    h7 <= !(h6 || h5);
-    h8 <= !(h7 || h6);
-    h9 <= !(h8 || h7); 
-    h10 <= !(h9 || h10);
-    h11 <= !(h10 || h9);
-    h12 <= !(h11 || h10);
-    h13 <= !(h12 || h11);
-    h14 <= !(h13 || h12);
-    hf <= {h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14};
+
+    hf <= {h0,h1,h2,h3,h4,h5};
 end
 endmodule

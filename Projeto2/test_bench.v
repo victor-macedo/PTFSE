@@ -1,34 +1,23 @@
 `timescale 1ns / 100ps
 
-module teste_main;
+module Controlador;
 
-reg clk, rst, bist_start, k, j, en;
-wire pass_fail, BIST_END,synced_d,err_d;
+reg clk, rst, bist_start;
+wire out_synced_d, out_sync_err_d, bist_end;
 
-main under_test(.CLK(clk),.RST(rst), .bist_start(bist_start),
-                .in_k(k),.in_j(j),.in_en(en), .out_synced_d(synced_d),.out_sync_err_d(err_d),
-                .pass_fail(pass_fail), .bist_end(BIST_END));
+main main(clk,rst,bist_start,bist_end,pass_fail,in_k,in_j,in_en,out_synced_d,out_sync_err_d);
 
 initial
 begin  
-        clk = 0;
-        k = 0;
-        j= 0;
-        en =0;
-        #0 rst = 0;         //0
-        #40 rst = 1;        //10
-        #80 rst = 0;        //90
-        
+	bist_start = 0;
+	clk = 0;
+	rst = 1;
+    #200 rst = 0;
+    #200 bist_start = 1;     //300
+    wait(bist_end == 1);
+    #400 $finish;      //34400
 end
 
 always #50 clk=~clk;
-always #50 $display("Resultado do MISR, %b",under_test.hf);
-
-initial
-begin
-    #0 bist_start = 0;       //0
-    #300 bist_start = 1;     //300
-    wait(BIST_END) $finish;      //10300
-end
 
 endmodule

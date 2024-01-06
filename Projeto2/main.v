@@ -18,7 +18,7 @@ circuito12_scan circuito_scan(.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(c
 LFSR LFSR_in (.CLK(CLK), .RST(RST), .x0(in_x0),.x1(in_x1),.x2(in_x2)); //LFSR na entrada do circuito
 Bist_control Bist(.CLK(CLK), .RESET(RST), .START(bist_start), .OUT(bist_out), .BIST_END(bist_end), .RUNNING(),.INIT(),.FINISH());//INit deve reiniciar o scan,Finish � util para saber quando fazer pass_fail
 MISR MISR(.CLK(CLK),.e0(scan_out),.e1(out_synced_d),.e2(out_sync_err_d),.hf(hf));
-//Falta signature e comparador
+Comparador Comp(.RST(RST),.Bist_end(bist_end), .hf(hf),.passnfail(pass_fail));
 always @(*) //Mux da entrada dos dados
 begin    
     if  (bist_out == 0) //entrada comum do circuito

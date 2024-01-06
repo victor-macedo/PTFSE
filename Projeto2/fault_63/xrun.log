@@ -1,0 +1,767 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 06, 2024 at 22:30:46 WET
+xrun
+	-R
+	-fault_concurrent
+	-nospecify
+	-notimingchecks
+	-delay_mode zero
+	-run
+	-exit
+	-define functional
+	-input ./strobes.tcl
+	-input fault_list.tcl
+	-fault_logfile fault_xrun_sim.log
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+Loading snapshot worklib.main_test_bench:v .................... Done
+xcelium> source /opt/ic_tools/cad/xcelium20_09_hf001/tools/xcelium/files/xmsimrc
+xcelium> #
+xcelium> # Replace ONLY 'uut' by the name of the module instantiated in your testbench
+xcelium> # DO NOT ADD MORE SIGNALS TO THIS LIST
+xcelium> #
+xcelium> fs_strobe {main_test_bench.bist_end main_test_bench.pass_nfail} 
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.CLK}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_92}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_x0}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_93}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_n_0}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_fs_state[0]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_n_17}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_n_10}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_fs_state[1]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_n_1}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_n_19}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.circuito_scan_fs_state[2]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.scan_out}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_11}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_13}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_68}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_15}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_58}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.hf[3]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.pass_fail}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.hf[0]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.hf[1]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_86}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_90}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h7}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_89}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h6}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h5}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_88}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h4}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_87}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h3}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_85}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h2}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_84}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h1}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_83}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.MISR_h0}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.out_synced_d}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_82}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_77}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_79}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_76}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.out_sync_err_d}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_80}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_55}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_81}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_67}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_78}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_56}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_66}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.RST}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_72}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_74}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_57}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_75}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_73}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_71}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_state[0]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_54}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_70}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_743}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.bist_end}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_k}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_x1}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_j}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_x2}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.in_en}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_684}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_740}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_69}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_69}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_23}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_61}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_N[3]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_746}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_62}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_59}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_64}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_N[0]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_state[1]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_63}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_M[2]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_M[1]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_60}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_749}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_N[1]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_N[2]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_n_745}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_M[3]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_count_M[0]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.Bist_state[2]}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_8}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_52}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_51}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_5}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_9}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_50}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_46}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_47}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_18}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_16}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_49}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_3}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_42}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_44}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_48}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_41}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_43}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_37}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_30}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_32}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_38}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_4}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_39}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_35}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_1}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_10}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_36}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_25}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_13}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_20}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_22}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_33}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_31}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_26}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_21}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_0}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_7}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_28}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_19}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_14}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_12}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.bist_start}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_15}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_6}
+xcelium> fault -inject -time 0 -type SA0 {main_test_bench.under_test.n_17}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.CLK}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_92}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_x0}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_93}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_n_0}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_fs_state[0]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_n_17}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_n_10}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_fs_state[1]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_n_1}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_n_19}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.circuito_scan_fs_state[2]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_23}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_11}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_68}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_58}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_91}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[3]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.pass_fail}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[5]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[6]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[7]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[4]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h7}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_89}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h6}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h5}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_88}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h4}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_87}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h3}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_85}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.hf[2]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h2}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_84}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h1}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_83}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.MISR_h0}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.out_synced_d}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_82}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_77}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_76}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.out_sync_err_d}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_80}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_55}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_67}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_56}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_66}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.RST}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_72}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_74}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_57}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_75}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_73}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_71}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_state[0]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_54}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_810}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_70}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_743}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.bist_end}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_k}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_x1}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_j}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_x2}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.in_en}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_684}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_740}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_69}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_23}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_65}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_61}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_N[3]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_746}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_59}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_64}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_N[0]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_state[1]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_63}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_M[2]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_M[1]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_749}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_N[1]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_N[2]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_n_745}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_M[3]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_count_M[0]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.Bist_state[2]}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_8}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_53}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_52}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_51}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_5}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_9}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_50}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_46}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_47}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_18}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_16}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_49}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_3}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_45}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_42}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_44}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_48}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_41}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_43}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_40}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_37}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_30}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_32}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_38}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_4}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_35}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_10}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_25}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_13}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_20}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_22}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_34}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_33}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_31}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_27}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_21}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_29}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_0}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_24}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_7}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_19}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_2}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_14}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_12}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.bist_start}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_15}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_6}
+xcelium> fault -inject -time 0 -type SA1 {main_test_bench.under_test.n_17}
+xcelium> run
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.bist_end) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA0 fault (main_test_bench.under_test.RST) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_54) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_743) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_70) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_63) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_state[2]) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA1 fault (main_test_bench.under_test.n_8) at strobe point (main_test_bench.bist_end) at time 40 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_21) at strobe point (main_test_bench.bist_end) at time 150 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_740) at strobe point (main_test_bench.bist_end) at time 450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_65) at strobe point (main_test_bench.bist_end) at time 450 NS.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_61 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_52 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_53 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_61 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_52 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_53 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_46 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_43 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_61) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_52) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_M[3]) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_53) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_46) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_43) at strobe point (main_test_bench.bist_end) at time 1450 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_47 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_51 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_41 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_47 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_51 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_41 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_47) at strobe point (main_test_bench.bist_end) at time 2250 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_N[3]) at strobe point (main_test_bench.bist_end) at time 2250 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_51) at strobe point (main_test_bench.bist_end) at time 2250 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_41) at strobe point (main_test_bench.bist_end) at time 2250 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_0 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_29 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_0) at strobe point (main_test_bench.bist_end) at time 4450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_M[0]) at strobe point (main_test_bench.bist_end) at time 4450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_29) at strobe point (main_test_bench.bist_end) at time 4450 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_20 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_N[0]) at strobe point (main_test_bench.bist_end) at time 4950 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_20 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_20) at strobe point (main_test_bench.bist_end) at time 5050 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_746 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_69 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_16 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_746 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_69 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_746) at strobe point (main_test_bench.bist_end) at time 7750 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_69) at strobe point (main_test_bench.bist_end) at time 7750 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_684 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_3 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_25 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_4 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_15 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_35 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_22 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_13 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_7 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_60 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_60) at strobe point (main_test_bench.bist_end) at time 8450 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_16 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_16) at strobe point (main_test_bench.bist_end) at time 8650 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_684 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_3 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_684) at strobe point (main_test_bench.bist_end) at time 9050 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_3) at strobe point (main_test_bench.bist_end) at time 9050 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_25 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_25) at strobe point (main_test_bench.bist_end) at time 9150 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_state[1]) at strobe point (main_test_bench.bist_end) at time 9150 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_4 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_4) at strobe point (main_test_bench.bist_end) at time 9250 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_15 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_35 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_22 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_13 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_7 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_15) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_35) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_22) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_state[0]) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_13) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_7) at strobe point (main_test_bench.bist_end) at time 9350 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.CLK of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_13 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_68 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_70 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_69 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_69 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_23 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_64 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_8 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_51 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_50 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_46 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_18 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_49 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_42 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_44 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_48 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_41 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_43 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_37 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_30 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_32 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_38 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_39 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_36 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_13 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_33 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_31 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_7 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_12 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.bist_start of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.CLK of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.RST of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_810 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_684 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_740 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_61 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_746 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_M of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_count_N of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_745 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_52 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_9 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_50 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_47 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_49 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_45 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_42 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_44 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_48 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_40 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_37 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_30 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_32 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_38 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_35 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_25 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_22 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_34 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_33 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_31 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_0 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_24 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.bist_start of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_17 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.bist_end) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.CLK) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_13) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_68) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_state[0]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_70) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_69) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_69) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_n_23) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_N[3]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_64) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_N[0]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_state[1]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_M[2]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_M[1]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_N[1]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_N[2]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_M[3]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_count_M[0]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_8) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_51) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_50) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_46) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_18) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_49) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_42) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_44) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_48) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_41) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_43) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_37) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_30) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_32) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_38) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_39) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_36) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_13) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_33) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_31) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_7) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_12) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.bist_start) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.CLK) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.RST) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_810) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_684) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_740) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_61) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_746) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_M[2]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_M[1]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_N[1]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_count_N[2]) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_745) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_52) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_9) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_50) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_47) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_49) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_45) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_42) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_44) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_48) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_40) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_37) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_30) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_32) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_38) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_35) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_25) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_22) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_34) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_33) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_31) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_0) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_24) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.bist_start) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_17) at strobe point (main_test_bench.bist_end) at time 9450 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_54 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_state of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_26 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_54 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.Bist_state[2]) at strobe point (main_test_bench.bist_end) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_26) at strobe point (main_test_bench.bist_end) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_54) at strobe point (main_test_bench.bist_end) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.pass_fail) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.circuito_scan_n_0) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.scan_out) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA0 fault (main_test_bench.under_test.n_58) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.hf[3]) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.MISR_h7) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_89) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.MISR_h4) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_85) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.MISR_h1) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_83) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.out_sync_err_d) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_80) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_73) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA0 fault (main_test_bench.under_test.n_63) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA0 fault (main_test_bench.under_test.Bist_state[2]) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA0 fault (main_test_bench.under_test.n_26) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_19) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.circuito_scan_fs_state[1]) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.circuito_scan_n_1) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_11) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.MISR_h6) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.MISR_h5) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_88) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_87) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.MISR_h3) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.MISR_h2) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_84) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.MISR_h0) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.out_synced_d) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_77) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_74) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA1 fault (main_test_bench.under_test.n_57) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_75) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA1 fault (main_test_bench.under_test.n_54) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.in_k) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA1 fault (main_test_bench.under_test.in_x1) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.in_x2) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_27) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTPDT: [FLT] Potentially detected SA1 fault (main_test_bench.under_test.n_14) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_15) at strobe point (main_test_bench.pass_nfail) at time 9550 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_743 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_1 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.Bist_n_743 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_10 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_1) at strobe point (main_test_bench.bist_end) at time 9650 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.Bist_n_743) at strobe point (main_test_bench.bist_end) at time 9650 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_10) at strobe point (main_test_bench.bist_end) at time 9650 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_58 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_58) at strobe point (main_test_bench.bist_end) at time 9750 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_6 of type SA0 marked NOT_SIMULATABLE.
+xmsim: *W,FLTRTL: [FLT] Net main_test_bench.under_test.g2046__9315.Q has an RTL load (File: ./test_bench.v Line: 26). Fault main_test_bench.under_test.n_21 of type SA1 marked NOT_SIMULATABLE.
+xmsim: *N,FLTDT: [FLT] Detected SA0 fault (main_test_bench.under_test.n_6) at strobe point (main_test_bench.bist_end) at time 9850 NS.
+xmsim: *N,FLTDT: [FLT] Detected SA1 fault (main_test_bench.under_test.n_21) at strobe point (main_test_bench.bist_end) at time 9850 NS.
+xmsim: *W,FLTSTRB: [FLT] Faults on main_test_bench.under_test.g2046__9315.Q node are not marked as NS because node is connected with strobe main_test_bench.bist_end.
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db/db_scope/test_fatima.novalocal_160481704580247346/xfs_4ec9497a.ucd.
+Simulation complete via $finish(1) at time 10050 NS + 0
+./test_bench.v:33     $finish;      //10300
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 06, 2024 at 22:30:47 WET  (total: 00:00:01)
+xmsim: *N,FLTVWT: WRITE: Writing vSof /afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db/db_scope/test_fatima.novalocal_160481704580247346/xfs.vsof.

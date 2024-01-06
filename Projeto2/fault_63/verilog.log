@@ -1,0 +1,415 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jan 06, 2024 at 20:27:00 WET
+xrun
+	-gui
+	-access +r
+	-l verilog.log
+	-v /opt/ic_tools/pdk/ams_c35_410/verilog/udp.v
+	-v /opt/ic_tools/pdk/ams_c35_410/verilog/c35b4/c35_CORELIB.v
+	circuito_syn.v
+	test_bench.v
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+Recompiling... reason: file './circuito_syn.v' is newer than expected.
+	expected: Sat Jan  6 20:20:58 2024
+	actual:   Sat Jan  6 20:26:52 2024
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xmvlog: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+file: circuito_syn.v
+	module worklib.main:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 12
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xrun: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xmelab: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+		Caching library 'c35_CORELIB' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'udp' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		teste_main
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:               138      31
+		UDPs:                   44       7
+		Primitives:            187       8
+		Timing outputs:        173      24
+		Registers:              40      17
+		Scalar wires:          214       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Timing checks:         268       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.teste_main:v
+INCLUDE $AMS_DIR/cds/HK_ALL/env/cds.lib
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,27): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B3   $AMS_DIR/cds/HK_C35/TECH_C35B3
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,31): cds.lib Invalid environment variable ''.
+DEFINE PRIMLIB      $AMS_DIR/cds/HK_C35/PRIMLIB
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,32): cds.lib Invalid environment variable ''.
+DEFINE ESDLIB       $AMS_DIR/cds/HK_C35/ESDLIB
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,33): cds.lib Invalid environment variable ''.
+DEFINE GATES        $AMS_DIR/cds/HK_C35/GATES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,34): cds.lib Invalid environment variable ''.
+DEFINE CORELIBD     $AMS_DIR/cds/HK_C35/CORELIBD
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,35): cds.lib Invalid environment variable ''.
+DEFINE TECH_C35B4   $AMS_DIR/cds/HK_C35/TECH_C35B4
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,36): cds.lib Invalid environment variable ''.
+DEFINE LEADFRAMES    $AMS_DIR/cds/HK_ALL/LEADFRAMES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,37): cds.lib Invalid environment variable ''.
+DEFINE PACKAGES   $AMS_DIR/cds/HK_ALL/PACKAGES
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,38): cds.lib Invalid environment variable ''.
+DEFINE BORDERS   $AMS_DIR/cds/HK_ALL/BORDERS
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,39): cds.lib Invalid environment variable ''.
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,40): cds.lib Invalid environment variable ''.
+DEFINE SFCLIB_C35B4C0 $AMS_DIR/cds/HK_C35/SFCLIB_C35B4C0
+|
+xmsim: *W,DLCVAR (/afs/.ist.utl.pt/users/9/0/ist193790/cds.lib,41): cds.lib Invalid environment variable ''.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/ic_tools/cad/xcelium20_09_hf001/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm teste_main.BIST_END teste_main.bist_start teste_main.clk teste_main.en teste_main.err_d teste_main.j teste_main.k teste_main.pass_fail teste_main.rst teste_main.synced_d
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 10051 NS + 0
+./test_bench.v:33     $finish;      //10300
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jan 06, 2024 at 20:27:47 WET  (total: 00:00:47)

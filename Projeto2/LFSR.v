@@ -10,9 +10,9 @@ always @(posedge CLK)
 begin
     if (RST == 0)
     begin
-        x0 <= x1;
         x1 <= x2;
-        x2 <= !(x2 || x0);  
+        x2 <= (x2 ^ x0);  
+        x0 <= x1;
     end 
     else
     begin

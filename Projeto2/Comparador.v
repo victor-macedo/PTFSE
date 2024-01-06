@@ -8,9 +8,12 @@ output reg passnfail;
 
 always @(Finish)
 begin
-    if (hf == 10010010) //Valor obtido atraves da simulacao
-    passnfail <= 1;
-    else
-    passnfail <= 0;
+    if (Finish == 1)
+    begin
+        if (hf == 10010010) //Valor obtido atraves da simulacao
+        passnfail <= 1;
+        else
+        passnfail <= 0;
+    end
 end
 endmodule

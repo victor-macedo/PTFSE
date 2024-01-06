@@ -107,7 +107,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,INIT,FINISH);
         S3:begin //Sinal de finish
                next_state = S4;
                RUNNING = 0;
-               BIST_END = 0;
+               BIST_END = 1;
                OUT = 0;
                INIT = 0;
                FINISH = 1;

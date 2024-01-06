@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
-module LFSR(CLK,RST,Init,x0,x1,x2);
-input CLK,RST,Init;
+module LFSR(CLK,RST,Seed,x0,x1,x2);
+input CLK,RST,Seed;
 
 output reg x0,x1,x2;
 
@@ -10,7 +10,7 @@ always @(posedge CLK)
 begin
     if (RST == 0)
     begin
-        if (Init == 0)
+        if (Seed == 0)  //Reseed
         begin
             x1 <= x2;
             x2 <= (x2 ^ x0);  
@@ -18,9 +18,9 @@ begin
         end 
         else
         begin
-            x0 <= 0;
-            x1 <= 0;
-            x2 <= 1;
+            x1 <= x2;
+            x2 <= (x1 ^ x0);  
+            x0 <= x1;
         end
         
     end    

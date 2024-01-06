@@ -86,15 +86,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
                 Seed = 0;
                 FINISH = 0;
             end
-            else if (count_M==5)
-            begin
-            next_state = S3;
-            RUNNING = 0;
-            BIST_END = 1;
-            OUT = 0;
-            Seed = 1;
-            FINISH = 0;
-            end
             else if (count_M==M)
             begin
                 next_state = S3;
@@ -110,8 +101,12 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
                  RUNNING = 1;
                  BIST_END = 0;
                  OUT = 1;
-                 Seed = 0;
                  FINISH = 0;
+                 if (count_M>5)
+                    Seed = 1;
+                else
+                    Seed = 0;   
+                 
             end
         S3:begin //Sinal de finish
                next_state = S4;

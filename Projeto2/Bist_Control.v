@@ -4,7 +4,6 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
    input CLK,RESET,START;
    output reg OUT,BIST_END,RUNNING,Seed,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
-   reg [7:0] count; //deve contar ate 89 = (N+1)*(M+1)-1 = (9+1)*(8+1) 
    reg [3:0] count_N, count_M;
    
    // state flip-flops;
@@ -12,7 +11,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
  
    // state coding
    localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5,S5=6;
-   localparam [4:0] N=9, M=9;
+   localparam [4:0] N=9, M=16;
     
 
     always @(posedge CLK or posedge RESET)
@@ -102,7 +101,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
                  BIST_END = 0;
                  OUT = 1;
                  FINISH = 0;
-                 if (count_M>5)
+                 if (count_M>(N/2))
                     Seed = 1;
                 else
                     Seed = 0;   

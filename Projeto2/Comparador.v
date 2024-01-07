@@ -2,7 +2,7 @@
 
 module Comparador(CLK, RST,Finish, hf,passnfail);
 input CLK,RST,Finish;
-input [6:0]hf;
+input [11:0]hf;
 output reg passnfail;
 
 always @(*)

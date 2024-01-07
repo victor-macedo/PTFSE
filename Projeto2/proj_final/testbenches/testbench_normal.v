@@ -19,8 +19,7 @@ begin
         idx = 0;
         bist_start = 0;       
         rst = 1;        
-        #600 rst = 0;        
-        #10000 $finish;      
+        #60000 rst = 0;              
         
 end
 

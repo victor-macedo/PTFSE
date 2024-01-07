@@ -3,11 +3,11 @@
 module main_test_bench;
 
 reg clk, rst, bist_start, k, j, en;
-wire pass_fail, bist_end,synced_d,err_d;
+wire pass_nfail, bist_end,synced_d,err_d;
 
 main under_test(.CLK(clk),.RST(rst), .bist_start(bist_start),
                 .in_k(k),.in_j(j),.in_en(en), .out_synced_d(synced_d),.out_sync_err_d(err_d),
-                .pass_fail(pass_fail), .bist_end(bist_end));
+                .pass_fail(pass_nfail), .bist_end(bist_end));
 
 initial
 begin  

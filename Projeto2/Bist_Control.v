@@ -4,14 +4,14 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
    input CLK,RESET,START;
    output reg OUT,BIST_END,RUNNING,Seed,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
-   reg [3:0] count_N, count_M;
+   reg [5:0] count_N, count_M;
    
    // state flip-flops;
    reg [2:0] state, next_state;
  
    // state coding
    localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5,S5=6;
-   localparam [4:0] N=9, M=16;
+   localparam [4:0] N=9, M=40;
     
 
     always @(posedge CLK or posedge RESET)

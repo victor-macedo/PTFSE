@@ -2,22 +2,20 @@
 
 module test_bench_normal;
 
-reg clk, rst, bist_start;
-wire pass_nfail, bist_end,synced_d,err_d,k, j, en;
+reg clk, rst;
+wire synced_d,err_d,k, j, en;
 integer idx; //index para acesso do vetor
 reg [0:2] vetores[0:29];  //Vetor de 30 posicoes com 3 bits cada
 assign {k,j,en} = vetores[idx];
 
-main under_test(.CLK(clk),.RST(rst), .bist_start(bist_start),
-                .in_k(k),.in_j(j),.in_en(en), .out_synced_d(synced_d),.out_sync_err_d(err_d),
-                .pass_fail(pass_nfail), .bist_end(bist_end));
+circuito12 under_test(.clk(clk),.rst(rst),.k(k),.j(j),.rx_en(en),
+                         .synced_d(synced_d),.sync_err_d(err_d));
 
 initial
 begin  
         $readmemb("circuito12.vec", vetores);
         clk = 0;
-        idx = 0;
-        bist_start = 0;       
+        idx = 0;      
         rst = 1;        
         #60000 rst = 0;              
         

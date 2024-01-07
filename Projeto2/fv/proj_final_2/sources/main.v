@@ -9,6 +9,7 @@ reg circ_k,circ_j,circ_en; //Registros para o circuito
 wire in_x0,in_x1,in_x2,scan_x; //Registro para o LFSR
 wire scan_out,Finish,Seed,Poly;
 wire [23:0] hf;
+//circuito12 circuito (.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d));
 circuito12 circuito_scan(.clk(CLK),.rst(RST),.k(circ_k),.j(circ_j),.rx_en(circ_en),.synced_d(out_synced_d),.sync_err_d(out_sync_err_d), .scan_en(bist_out),
      .scan_in(scan_x), .scan_out(scan_out));
 LFSR LFSR_in (.CLK(CLK), .RST(RST),.Seed(Seed),.Poly(Poly),.x0(in_x0),.x1(in_x1),.x2(in_x2)); //LFSR na entrada do circuito

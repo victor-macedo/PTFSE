@@ -9,7 +9,7 @@ always @(*)
 begin
     if (Finish == 1)
     begin
-        if (hf == 24'hCEFDCC) //Valor obtido atraves da simulacao
+        if (hf == 24'hCCC15D) //Valor obtido atraves da simulacao
         passnfail <= 1;
         else
         passnfail <= 0;

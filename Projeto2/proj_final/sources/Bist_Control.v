@@ -1,4 +1,4 @@
-`timescale 1ns / 100ps
+`timescale 1ns / 1ps
 
 module Bist_control(CLK, RESET, START, OUT, BIST_END,Poly, Seed,FINISH);
    input CLK,RESET,START;

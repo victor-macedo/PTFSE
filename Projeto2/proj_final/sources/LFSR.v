@@ -26,17 +26,17 @@ begin
         end
         if (Seed == 1)
         begin
-            x0 <= 1;
-            x1 <= 1;
-            x2 <= 1;
+            x0 <= 0;
+            x1 <= 0;
+            x2 <= 0;
             x3 <= 1;
         end
     end    
     else
     begin
-        x0 <= 0;
-        x1 <= 0;
-        x2 <= 0;
+        x0 <= 1;
+        x1 <= 1;
+        x2 <= 1;
         x3 <= 1;
     end
 end

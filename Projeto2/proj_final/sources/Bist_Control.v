@@ -111,7 +111,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END,Poly, Seed,FINISH);
                     Poly = 1;
                 else
                     Poly = 0; 
-                 if (count_M == M%4) //A cada quarto do contador troca a seed
+                 if (count_M == M>>4) //A cada quarto do contador troca a seed
                     begin
                         if (count_N==1)
                         Seed = 1;

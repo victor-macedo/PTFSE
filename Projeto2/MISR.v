@@ -2,8 +2,8 @@
 
 module MISR(CLK,RST,bist_end,e0,e1,e2,hf);
 input CLK,RST,bist_end,e0,e1,e2;
-reg h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14;
-output reg [14:0] hf;
+reg h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11;
+output reg [11:0] hf;
 
 always @(posedge CLK)
 begin
@@ -21,14 +21,11 @@ begin
         h6 <= h7;
         h7 <= h8;
         h8 <= h9;
-        h9 <= h10;
-        h10 <= h11;
-        h11 <= h12;
-        h12 <= (e2 ^ h11);
-        h13 <= (e1 ^ h12);
-        h14 <= (e0 ^ h13); 
+        h9 <= (e2 ^ h8);
+        h10 <= (e1 ^ h9);
+        h11 <= (e0 ^ h10); 
 
-        hf <= {h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14};
+        hf <= {h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11};
         end
     end
     else if (RST == 1)
@@ -49,7 +46,7 @@ begin
         h13 <= 1;
         h14 <= 1;
 
-        hf <= {h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14}; 
+        hf <= {h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11}; 
         end
 end
 endmodule

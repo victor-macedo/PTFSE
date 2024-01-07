@@ -1,0 +1,60 @@
+//
+// Written by NGen Library ver.1.2.6 2024-01-07 15:45:39
+//
+
+header vsof {
+        runner_version : <text>2</text> ;
+        version : <text>3</text> ;
+        vmanager_version : <text>10.20.xxx-yyy</text> ;
+}
+
+session_output "main_test_bench" {
+        original_session_dir : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2</text>;
+        runs_in_session : 1;
+        session_description : <text>Single run of 'main_test_bench'</text>;
+        session_dir : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2</text>;
+        session_end_time : <text>1704642339</text>;
+        session_name : <text>main_test_bench</text>;
+        session_owner : <text>ist193790</text>;
+        session_start_time : <text>1704642339</text>;
+        session_status : <text>post_session_script_done</text>;
+        session_type : <text>single_run</text>;
+        top_dir : <text>$ATTR(session_dir)/..</text>;
+}
+
+run 1 {
+        end_time : <text>1704642339</text>;
+        engine : <text>xmsim</text>;
+        fault_db : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db</text>;
+        full_title : <text>main_test_bench</text>;
+        host_name : <text>fatima.novalocal</text>;
+        inca_lib_dir : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/xcelium.d</text>;
+        job_status : <text>finished</text>;
+        log_file : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/xrun.log</text>;
+        original_test_path : <text>___main_test_bench</text>;
+        owner : <text>ist193790</text>;
+        run_dir : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db/db_scope/test_fatima.novalocal_115571704642339166</text>;
+        run_id : 1;
+        run_type : <text>simulation</text>;
+        simulator : <text>xmsim</text>;
+        snapshot_name : <text>main_test_bench</text>;
+        start_time : <text>1704642339</text>;
+        test_name : <text>main_test_bench</text>;
+
+        coverage_model "xfs" {
+                tool_name : <text>xfs</text>;
+                ucm_checksum : <text>6a368905</text>;
+                ucm_file : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db/db_scope/xfs_6a368905.ucm</text>;
+        }
+
+        coverage_data "xfs" {
+                tool_name : <text>xfs</text>;
+                ucd_file : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/fault_db/db_scope/test_fatima.novalocal_115571704642339166/xfs_6a368905.ucd</text>;
+        }
+
+        filter "xfs" {
+                filter_files : <text>cdns_sim.flt</text>;
+                filter_id : <text>xfs</text>;
+                log_file : <text>/afs/.ist.utl.pt/users/9/0/ist193790/FTSE/proj_2/xrun.log</text>;
+        }
+}

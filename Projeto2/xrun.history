@@ -1,0 +1,3 @@
+s1(07Jan2024:15:36:09):  xrun -gui -access +r -l verilog.log -v /opt/ic_tools/pdk/ams_c35_410/verilog/udp.v -v /opt/ic_tools/pdk/ams_c35_410/verilog/c35b4/c35_CORELIB.v circuito_scan_syn.v main.v LFSR.v MISR.v Bist_Control.v test_bench.v 
+s2(07Jan2024:15:38:43):  xrun -gui -access +r -l verilog.log -v /opt/ic_tools/pdk/ams_c35_410/verilog/udp.v -v /opt/ic_tools/pdk/ams_c35_410/verilog/c35b4/c35_CORELIB.v circuito_scan_syn.v main.v LFSR.v MISR.v Bist_Control.v test_bench.v 
+s3(07Jan2024:15:45:16):  xrun -clean -elaborate -define functional -fault_file fault.file -fault_top main -fault_logfile fault_xrun_elab.log -v /opt/ic_tools/pdk/ams_c35_410/verilog/udp.v -v /opt/ic_tools/pdk/ams_c35_410/verilog/c35b4/c35_CORELIB.v circuito_syn.v test_bench.v 

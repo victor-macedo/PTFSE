@@ -1,8 +1,9 @@
 `timescale 1ns / 100ps
 
-module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
+module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
    input CLK,RESET,START;
-   output reg OUT,BIST_END,RUNNING,Seed,FINISH;
+   reg RUNNING;
+   output reg OUT,BIST_END,Seed,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
    reg [6:0] count_N, count_M;
    
@@ -101,7 +102,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, RUNNING,Seed,FINISH);
                  BIST_END = 0;
                  OUT = 1;
                  FINISH = 0;
-                 if (count_M>(N/2))
+                 if (count_M>(3*N/2))
                     Seed = 1;
                 else
                     Seed = 0;   

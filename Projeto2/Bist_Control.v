@@ -1,9 +1,9 @@
 `timescale 1ns / 100ps
 
-module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
+module Bist_control(CLK, RESET, START, OUT, BIST_END,Poly, Seed,FINISH);
    input CLK,RESET,START;
    reg RUNNING;
-   output reg OUT,BIST_END,Seed,FINISH;
+   output reg OUT,BIST_END,Poly,Seed,FINISH;
    //É bom adicionar 2 sinais, um antes do running e outro antes do bist_end (Init e fisish)
    reg [6:0] count_N, count_M;
    
@@ -12,7 +12,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
  
    // state coding
    localparam [2:0] IDLE=0, S0=1, S1=2, S2=3, S3=4, S4=5,S5=6;
-   localparam [6:0] N=9, M=100;
+   localparam [6:0] N=9, M=110;
     
 
     always @(posedge CLK or posedge RESET)
@@ -55,6 +55,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
             BIST_END = 0;
             OUT = 0;
             Seed = 0;
+            Poly = 0;
             FINISH = 0;
             end
         S0:begin    // Garantido start=0 espera para start=1
@@ -67,6 +68,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
                BIST_END = 0;
                OUT = 0;
                Seed = 0;
+               Poly = 0;
                FINISH = 0;
             end    
         S1:begin    //Ativa sinal de init antes de comecar a contagem
@@ -75,6 +77,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
                BIST_END = 0;
                OUT = 0;
                Seed = 0;
+               Poly = 0;
                FINISH = 0;
             end
         S2:if (count_N==N) //funcionamento do contador
@@ -84,6 +87,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
                 BIST_END = 0;
                 OUT = 0;
                 Seed = 0;
+                Poly = 0;
                 FINISH = 0;
             end
             else if (count_M==M)
@@ -93,6 +97,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
                 BIST_END = 1;
                 OUT = 0;
                 Seed = 0;
+                Poly = 0;
                 FINISH = 0;
             end
             else 
@@ -102,18 +107,28 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
                  BIST_END = 0;
                  OUT = 1;
                  FINISH = 0;
-                 if (count_M>(3*N/2))
-                    Seed = 1;
+                 if (count_M>(N/2))  //Muda o polinomio na metade do contador
+                    Poly = 1;
                 else
-                    Seed = 0;   
-                 
-            end
+                    Poly = 0; 
+                 if (count_M == M%4) //A cada quarto do contador troca a seed
+                    begin
+                        if (count_N==1)
+                        Seed = 1;
+                    end
+                 else
+                 begin 
+                    if (count_N==1)
+                    Seed = 0; 
+                end       
+             end
         S3:begin //Sinal de finish
                next_state = S4;
                RUNNING = 0;
                BIST_END = 1;
                OUT = 0;
                Seed = 0;
+               Poly = 0;
                FINISH = 1;
             end     
         S4:begin
@@ -126,6 +141,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
         OUT = 0;
         BIST_END = 1;
         Seed = 0;
+        Poly = 0;
         FINISH = 0;
               
          end
@@ -139,6 +155,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
         OUT = 0;
         BIST_END = 1;
         Seed = 0;
+        Poly = 0;
         FINISH = 0;    
         end
         default:   
@@ -148,6 +165,7 @@ module Bist_control(CLK, RESET, START, OUT, BIST_END, Seed,FINISH);
              OUT = 0;
              BIST_END = 0;
              Seed = 0;
+             Poly = 0;
              FINISH = 0;
          end 
             

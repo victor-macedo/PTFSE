@@ -1,9 +1,0 @@
-define XMSIMRC	( /opt/ic_tools/cad/xcelium20_09_hf001/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
-define AMSRC	( /opt/ic_tools/cad/xcelium20_09_hf001/tools/xcelium/files/amsrc, ~/.amsrc )
-include ./hdlrun.var
-include ./xllibs/hdl.var
-define SNAPSHOT worklib.main_test_bench:v
-DEFINE RUNMODEDEFAULT 1
-DEFINE LIB_MAP ($LIB_MAP, + => worklib )
-define ELAB_SNAPSHOT
-define SNAPSHOT worklib.main_test_bench:v

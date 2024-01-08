@@ -28,7 +28,6 @@ begin
     #160000 bist_start = 1;     //300
     #200000 bist_start = 0;
     wait(bist_end) 
-    #120000
     $finish;      //10300
 end
 

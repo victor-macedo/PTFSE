@@ -14,12 +14,12 @@ main under_test(.CLK(clk),.RST(rst), .bist_start(bist_start),
 
 initial
 begin  
-        $readmemb("circuito12.vec", vetores);
+        $readmemb("./testbenches/circuito12.vec", vetores);
         clk = 0;
         idx = 0;
         bist_start = 0;       
         rst = 1;        
-        #60000 rst = 0;              
+        #60000 rst = 0;            
         
 end
 

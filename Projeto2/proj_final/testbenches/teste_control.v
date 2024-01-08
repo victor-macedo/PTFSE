@@ -3,9 +3,9 @@
 module Teste_Controlador;
 
 reg clk, rst, start;
-wire OUT, BIST_END, INIT, FINISH,  Seed, Poly;
+wire OUT, BIST_END, FINISH;
 
-Bist_control BIST_Test(clk, rst, start, OUT, BIST_END,Poly, Seed,FINISH);
+Bist_control BIST_Test(clk, rst, start, OUT, BIST_END,FINISH);
 
 initial
 begin  
@@ -16,10 +16,7 @@ begin
         #4000 rst = 1;      //4210
         #200 rst = 0;       //4410
         #7500 rst =1;       //11910
-        #200 rst =0;        //12110
-        #25000 rst = 1 ;    //14610
-        #200 rst =0;        //14810
-        
+        #200 rst =0;        //12110        
 end
 
 always #50 clk=~clk;
@@ -43,7 +40,7 @@ begin
     #200 start = 0;     //14200
     #10000 start = 1;   //24200
     #200 start = 0;     //24400
-    #10000 $finish;      //34400
+    #100000 $finish;      //34400
 end
 
 endmodule

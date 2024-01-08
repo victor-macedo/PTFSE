@@ -1,4 +1,0 @@
-#
-# Edit the name of the module instantiated in your testbench
-#
-fault_target main_test_bench.under_test -type SA0+SA1

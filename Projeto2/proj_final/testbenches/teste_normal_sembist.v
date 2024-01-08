@@ -13,11 +13,12 @@ circuito12 under_test(.clk(clk),.rst(rst),.k(k),.j(j),.rx_en(en),
 
 initial
 begin  
-        $readmemb("circuito12.vec", vetores);
+        $readmemb("./testbenches/circuito12.vec", vetores);
         clk = 0;
         idx = 0;      
         rst = 1;        
-        #60000 rst = 0;              
+        #60000 rst = 0;        
+    
         
 end
 

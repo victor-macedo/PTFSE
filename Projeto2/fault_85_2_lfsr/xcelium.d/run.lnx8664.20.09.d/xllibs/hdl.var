@@ -1,4 +1,0 @@
-define LIB_MAP ( $LIB_MAP \
-, ../../../../../../../../../../../opt/ic_tools/pdk/ams_c35_410/verilog/c35b4/c35_CORELIB.v => c35_CORELIB \
-, ../../../../../../../../../../../opt/ic_tools/pdk/ams_c35_410/verilog/udp.v => udp \
-)

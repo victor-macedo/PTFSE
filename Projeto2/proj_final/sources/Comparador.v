@@ -2,14 +2,14 @@
 
 module Comparador(CLK,Finish, hf,passnfail);
 input CLK,Finish;
-input [23:0]hf;
+input [7:0]hf;
 output reg passnfail;
 
 always @(*)
 begin
     if (Finish == 1)
     begin
-        if (hf == 24'hCCC15D) //Valor obtido atraves da simulacao
+        if (hf == 8'hD9) //Valor obtido atraves da simulacao
         passnfail <= 1;
         else
         passnfail <= 0;
